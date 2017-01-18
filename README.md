@@ -1,1 +1,1 @@
-# collectR
+# wildfly-swarm-microprofile-example

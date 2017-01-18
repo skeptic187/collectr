@@ -1,0 +1,7 @@
+{
+  "name": "Wildfly Swarm Microprofile Example",
+  "description": "An example app running JBoss Wildfly Swarm using Microprofile.",
+  "website": "http://wildfly-swarm.io/",
+  "addons": [],
+  "success_url": "/"
+}
