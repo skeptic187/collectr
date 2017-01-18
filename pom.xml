@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>de.eberle</groupId>
+	<artifactId>collectr</artifactId>
 	<name>Wildfly Swarm Microprofile Example</name>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -31,7 +31,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>demo</finalName>
+		<finalName>collectR</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.wildfly.swarm</groupId>
@@ -91,15 +91,15 @@
 		</dependency>
 		<dependency>
 			<groupId>org.wildfly.swarm</groupId>
+			<artifactId>logstash</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.wildfly.swarm</groupId>
 			<artifactId>jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.wildfly.swarm</groupId>
 			<artifactId>datasources</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.wildfly.swarm</groupId>
-			<artifactId>bean-validation</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.wildfly.swarm</groupId>
