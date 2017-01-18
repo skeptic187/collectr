@@ -1,12 +1,16 @@
 package de.eberle.microswarm;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+
+import de.eberle.microswarm.qualifiers.Logged;
 
 /**
  * @author Tobias Eberle
@@ -16,12 +20,13 @@ import javax.ws.rs.Produces;
 public class PersonResource {
 
 	@Inject
-	PersistenceHelper helper;
+	private EntityManager em;
 
 	@GET
+	@Logged
 	@Produces("application/json")
 	public List<Person> get() {
-		return helper.getEntityManager().createNamedQuery("Person.findAll", Person.class).getResultList();
+		return em.createNamedQuery("Person.findAll", Person.class).getResultList();
 	}
 
 }
